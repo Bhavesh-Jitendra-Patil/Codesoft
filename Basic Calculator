@@ -1,1 +1,36 @@
+def calculator():
 
+    print("(`-`) Welcome To Calculator (`-`)")
+
+    print("______________________________________________________________________________________________________________________")
+
+    while True:
+        operation = int(input("Enter\n1:- Addition\n2:- subtraction\n3:- Multiplication\n4:- Division\n5:- Exit\n \n Enter Your Value:- "))
+
+        if operation == 1:
+            val1 = int(input("Enter Your First Value:- "))
+            val2 = int(input("Enter Your Second Value:- "))
+            print("Your Answer is ",val1+val2)
+
+        elif operation == 2:
+            val1 = int(input("Enter Your First Value:- "))
+            val2 = int(input("Enter Your Second Value:- "))
+            print("Your Answer is ",val1-val2)
+
+        elif operation == 3:
+            val1 = int(input("Enter Your First Value:- "))
+            val2 = int(input("Enter Your Second Value:- "))
+            print("Your Answer is ",val1*val2)
+
+        elif operation == 4:
+            val1 = int(input("Enter Your First Value:- "))
+            val2 = int(input("Enter Your Second Value:- "))
+            print("Your Answer is ",val1/val2)
+
+        elif operation == 5:
+            break
+
+        else:
+            print("----Enter Valid Value To Perform Operation----")
+
+calculator()
