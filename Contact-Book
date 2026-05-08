@@ -1,1 +1,88 @@
+def contact():
 
+    contacts = {}
+
+    while True:
+
+        print("_-_-_ WELCOME TO CONTACT BOOK APLICATION_-_-_\n")
+
+        print("1 = Create Contact")
+        print("2 = View Contact")
+        print("3 = Update Contact")
+        print("4 = Delete Contact")
+        print("5 = Search Contact")
+        print("6 = Count Contact")
+        print("7 = Exit")
+
+        operation = int(input("Enter Your Choice : "))
+
+
+        if operation == 1:
+            name = input("Enter Your Name :- ")
+
+            if name in contacts:
+                print(f"Contact name {name} already exists !")
+            
+            else:
+                age = int(input("Enter Your Age : "))
+                number = int(input("Enter Your Number : "))
+                contacts[name] = {'age':int(age), 'number':number}
+                print(f'Contact {name} Has Been Created Successfully !')
+
+        elif operation == 2:
+            name = input("Enter Your Contact Name : ")
+
+            if name in contacts:
+                contact = contacts[name]
+                print(f'Name : {name}, Age : {age}, Mobile Number : {number}')
+
+            else:
+                print(f"{name} is not exist in contact !")
+
+        elif operation == 3:
+            name = input("Enter Your Contact Name : ")
+
+            if name in contacts:
+                age = int(input("Enter Your Age : "))
+                number = int(input("Enter Your Number : "))
+
+                contacts[name] = {'age':int(age), 'number':number}
+                print(f'Contact {name} Has Been Updated Successfully !')
+
+            else:
+                print(f"{name} is not Exists in contact !")
+
+        elif operation == 4:
+            name = input("Enter Your Contact Name : ")
+
+            if name in contacts:
+                del contacts[name]
+                print(f"{name} is Deleted Successfully !")
+
+            else:
+                print(f"{name} is Not Existed !")
+
+        elif operation == 5:
+
+            search_name = input("Enter Contact Name To Search : ")
+            found = False
+            for name,contact in contacts.items():
+                if search_name.lower() in name.lower():
+                    print(f'found - Name : {name}, Age : {age}, Mobile Number : {number}')
+                    found = True
+            if not found:
+                print("No Contact Found With That Name")
+
+        elif operation == 6:
+            print(f"Total Contacts In Your Book : {len(contacts)}")
+
+        elif operation ==7:
+            break
+
+        else:
+            print("Enter Valid Option !")
+
+
+contact()
+
+#created By Bhavesh
