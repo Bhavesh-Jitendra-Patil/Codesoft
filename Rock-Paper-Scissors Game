@@ -1,1 +1,59 @@
 
+def RPS_game():
+
+    while True:
+
+        print("\n:.:.:.:) Welcome To ROCK, PAPER, SCISSOR Game (:.:.:.:\n")
+
+        import random
+
+        item_list = ["Rock", "Paper", "Scissor"]
+
+        print("1: Rock")
+        print("2: Paper")
+        print("3: Scissor")
+        print("4: Exit\n")
+
+        User_Choice = int(input("Enter Your Choice "))
+
+        computer_Choice = random.choice(item_list)
+
+        if User_Choice != 4:
+            print(f'User Chooses = {User_Choice} , Computer Chooses = {computer_Choice}')
+        else:
+            print("Exiting Game ..........")
+            break
+
+        if User_Choice == computer_Choice:
+            print("Both Chooses Same Match 'TIE'.")
+
+        elif User_Choice == 1 and computer_Choice == "Paper" :
+            print("Computer Win ! :)")
+
+        elif User_Choice == 1 and computer_Choice == "Scissor" :
+            print("User Win ! :)")
+
+        elif User_Choice == 2 and computer_Choice == "Paper" :
+            print("Both Chooses Same Match 'TIE'.")
+
+        elif User_Choice == 2 and computer_Choice == "Rock" :
+            print("User Win ! :)")
+
+        elif User_Choice == 2 and computer_Choice == "Scissor" :
+            print("Computer Win ! :)")
+
+        elif User_Choice == 3 and computer_Choice == "Scissor" :
+            print("Both Chooses Same Match 'TIE'.")
+
+        elif User_Choice == 3 and computer_Choice == "Rock" :
+            print("Computer Win ! :)")
+
+        elif User_Choice == 3 and computer_Choice == "Paper" :
+            print("User Win ! :)")
+
+        else:
+            print("Enter valid Option")
+
+RPS_game()
+
+#created by Bhavesh
